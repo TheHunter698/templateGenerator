@@ -1,0 +1,29 @@
+<link type="text/css" rel="stylesheet" href="stylesheets/generateProjsStyles.css">
+<form action="generateProj" method="POST">
+  <table>
+    <tr>
+      <td>
+        <input type="text" name="projectName" value="Name of your project" required>
+      </td>
+      <td>
+        <textarea name="descriptionProject" required>Write your Description here</textarea>
+      </td>
+    </tr>
+    <tr>
+      <td><button type="button" id="advancedOptions" onclick="showAdvanced()">Advanced Options for the Template</button></td>
+      <div id="checkboxs"></div>
+    </tr>
+    <tr>
+      <td><input type="submit" value="Create Template" id="submit"></td>
+    </tr>
+  </table>
+  
+</form>
+<p id="output">{{output}}</p>
+<input type="checkbox" id="advancedClicked" name="advancedClicked" style="opacity: 0">
+<script
+			  src="https://code.jquery.com/jquery-3.3.1.js"
+			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+			  crossorigin="anonymous">
+</script>	
+<script src="/javascripts/generateProjsScripts.js"></script>

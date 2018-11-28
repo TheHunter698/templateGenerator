@@ -1,0 +1,28 @@
+{
+  "name": "generatorjs",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "DEBUG=generatorjs:* nodemon ./bin/www",
+    "dev-windows": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "adm-zip": "^0.4.13",
+    "bcrypt": "^3.0.2",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "fs-zip": "^1.0.2",
+    "hbs": "^4.0.1",
+    "mongoose": "^5.2.10",
+    "mongoose-type-relation": "^1.0.2",
+    "morgan": "^1.9.0",
+    "node-sass-middleware": "^0.11.0",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.7"
+  }
+}

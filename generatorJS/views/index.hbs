@@ -1,0 +1,25 @@
+ <link type="text/css" rel="stylesheet" href="stylesheets/index.css">
+ <form action="/loggIn" method="POST">
+        <table>
+            <tr>
+                <td>
+                    <h2>Login to our Database!</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input name="username" type="text" value="Username" class="input">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="password" name="password" value="Password" class="input password">
+                </td>
+            </tr>
+            <tr><td><input type="submit" value="Log In" id="submit"></td></tr>
+        </table> 
+    </form>
+    <a href="/register"><p>Register Here</p></a>
+    <p>{{output}}</p>
+    <p>{{error}}</p>
+  

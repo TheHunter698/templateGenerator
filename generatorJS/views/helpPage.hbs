@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link type="text/css" rel="stylesheet" href="stylesheets/helpStyles.css">
+  <title>Document</title>
+</head>
+<body>
+  <h3>Help Page</h3><br>
+  <button class="container">About the Generator</button>   <!-- This sections unfold and show the explanation -->
+  <div class="content"><p>This <strong>Template generator</strong> will help you establish the very roots of your projects. Create the template you want with your 
+    own structure and then download it without typing a single <b>'mkdir'</b> in the terminal. You can also type in the modules you'd like and the generator 
+    will include them in the package.json automatically!
+  </p></div>
+  <button class="container">Usage</button> 
+  <div class="content"><p>This page is really easy to use. Click on the button 'generate' to start making your template.
+    <br> Name the project and type a little short description for it. <br> The default structure will be shown in the bottom of the page once you click 'generate template'. <br>
+    If you'd like to set the folders you want in yor own way just click 'advanced settings' and the options will be shown to you.
+  </p></div>
+  <button class="container">Who it is aimed for</button> 
+  <div class="content"><p>This webpage is aimed for junior programmers, 
+    you must have the knowledge about the default structure used in professional world projects.</p>
+  </div>
+ 
+
+ <script>
+  var coll = document.getElementsByClassName("container");
+  var i;
+  for ( i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } 
+    })
+  }
+</script>
+  </body>
+</html>

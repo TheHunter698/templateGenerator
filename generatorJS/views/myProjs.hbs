@@ -1,0 +1,29 @@
+<link type='text/css' rel='stylesheet' href='/stylesheets/myProjsStyles.css'>
+
+
+<h3>{{user}}'s Profile</h3><br>
+<button class='container'>User Information</button>
+<section class='content'><p><strong>Name:</strong> {{output.name}} <strong>Username:</strong> {{output.username}}<br>
+<strong>e-mail:</strong> {{output.email}} <strong>Date of Birth:</strong> {{output.birthD}}</p>
+</section>
+<button class='container'>Your Projects</button><section class='content'>
+  {{#each output2}}
+  <p><strong>Id: </strong> {{this._id}} <strong>Name: </strong> {{this.name}} <strong>Created: </strong>{{this.created}}</p>
+  {{/each}}
+</section>
+
+<script>
+var coll = document.getElementsByClassName("container");
+var i;
+for ( i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  })
+}
+</script>
